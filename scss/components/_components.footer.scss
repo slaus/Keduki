@@ -1,0 +1,56 @@
+.footer {
+  background: #0b5f47;
+  padding: 13.6px 0;
+
+  .container {
+    @include flex;
+    @include justify-content(space-between);
+
+    @include mq(md) {
+      @include flex-wrap(wrap);
+      @include justify-content(space-around);
+    }
+  }
+
+  p {
+    font-family: $rcr, sans-serif;
+    font-size: 14px;
+    color: #fff;
+
+    @include mq(md) {
+      &:first-child {
+        width: 100%;
+        text-align: center;
+        margin: 10px auto;
+      }
+    }
+
+    @include mq(xs) {
+      margin: 10px auto;
+    }
+  }
+
+  p.politic {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p:first-child {
+    padding-left: 100px;
+
+    @include mq(lg) {
+      padding-left: 0;
+    }
+  }
+
+  p:last-child {
+    padding-right: 100px;
+
+    @include mq(lg) {
+      padding-right: 0;
+    }
+  }
+}

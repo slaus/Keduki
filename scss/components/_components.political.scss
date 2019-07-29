@@ -1,0 +1,42 @@
+.political {
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 640px;
+  background: #fff;
+  z-index: 99999;
+  display: none;
+
+  @include mq(s) {
+    width: 80%;
+    height: auto;
+    overflow: scroll;
+    max-height: 80%;
+  }
+
+  p {
+    font-family: $a, sans-serif;
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  img {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    cursor: pointer;
+    filter: grayscale(100%);
+
+    @include mq(s) {
+      filter: grayscale(0);
+      right: 1rem;
+    }
+  }
+
+  img:hover {
+    filter: grayscale(0)
+  }
+}

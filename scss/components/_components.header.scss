@@ -1,0 +1,42 @@
+.header {
+  background: #092831;
+  padding: 11px 0;
+
+  @include mq(s) {
+    display: none;
+  }
+
+  .container {
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+
+  &__logo {
+
+  }
+
+  nav {
+    width: 555px;
+
+    ul.menu {
+      @include flex;
+      @include justify-content(space-between);
+
+      li {
+
+        a {
+          font-family: $rcr, sans-serif;
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+
+      li:hover {
+        a {
+          color: #ff0002;
+        }
+      }
+    }
+  }
+}
